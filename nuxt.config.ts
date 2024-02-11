@@ -1,26 +1,76 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
+  typescript: {
+    shim: false
+  },
+
   app: {
     // global transition
-    pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' },
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
   },
+
   modules: [
-    // 'nuxt-icon',
-    // 'nuxt-lodash',
-    // '@pinia/nuxt',
-    // '@pinia-plugin-persistedstate/nuxt',
-    // '@nuxtjs/tailwindcss',
-    // '@nuxtjs/supabase'
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
+    "@vueuse/nuxt",
+    "nuxt-icon",
+    "@vee-validate/nuxt",
+    "@morev/vue-transitions/nuxt",
+    "@sidebase/nuxt-auth"
   ],
+
   runtimeConfig: {
     // The private keys which are only available server-side
-    apiSecret: '123',
+    apiSecret: "123",
+    dbName: process.env.DB_NAME,
 
     // Keys within public are also exposed client-side
     public: {
-      apiBase: '/api'
-    }
+      apiBase: "/api",
+    },
+  },
+
+  tailwindcss: {
+    exposeConfig: true
+  },
+
+  colorMode: {
+    classSuffix: ""
+  },
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+
+  imports: {
+    imports: [{
+      from: "tailwind-variants",
+      name: "tv",
+    }, {
+      from: "tailwind-variants",
+      name: "VariantProps",
+      type: true,
+    }, {
+      from: "vue-sonner",
+      name: "toast",
+      as: "useSonner"
+    }],
+  },
+
+  build: {
+    transpile: ["vue-sonner"]
+  },
+
+  auth : {
+    baseURL: process.env.AUTH_ORIGIN,
+    provider : {
+      type: 'authjs'
+    },
   }
-})
+});

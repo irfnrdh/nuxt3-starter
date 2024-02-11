@@ -1,7 +1,3 @@
-<template>
-    Navigasi
-</template>
+<template>Navigasi</template>
 
-<script setup>
-
-</script>
+<script setup></script>

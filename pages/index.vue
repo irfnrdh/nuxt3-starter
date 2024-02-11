@@ -1,15 +1,16 @@
 <template>
-    <div>
-      <h1>Index</h1>
-    </div>
-  </template>
-  
-  <script>
+  <div>
+    
+ini halaman index
+  </div>
+</template>
+
+<script>
   export default {
     // Component logic
-  }
-  </script>
-  
-  <style scoped>
+  };
+</script>
+
+<style scoped>
   /* Component styles */
-  </style>
+</style>

@@ -1,15 +1,15 @@
 <template>
-    <div>
-      <h1>Dukungan</h1>
-    </div>
-  </template>
-  
-  <script>
+  <div>
+    <h1>Dukungan</h1>
+  </div>
+</template>
+
+<script>
   export default {
     // Component logic
-  }
-  </script>
-  
-  <style scoped>
+  };
+</script>
+
+<style scoped>
   /* Component styles */
-  </style>
+</style>

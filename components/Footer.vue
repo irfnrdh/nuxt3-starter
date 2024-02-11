@@ -1,7 +1,3 @@
-<template>
-    Footer
-</template>
+<template>Footer</template>
 
-<script setup>
-
-</script>
+<script setup></script>
