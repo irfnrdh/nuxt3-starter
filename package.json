@@ -33,6 +33,7 @@
     "@vee-validate/zod": "^4.12.5",
     "@vueuse/nuxt": "^10.7.2",
     "joi": "^17.12.1",
+    "pg": "^8.11.3",
     "radix-vue": "^1.4.2",
     "sequelize": "^6.36.0",
     "sqlite3": "^5.1.7",
