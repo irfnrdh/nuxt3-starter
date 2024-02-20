@@ -19,7 +19,6 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@vee-validate/nuxt",
     "@morev/vue-transitions/nuxt",
-    "@sidebase/nuxt-auth"
   ],
 
   runtimeConfig: {
@@ -67,10 +66,17 @@ export default defineNuxtConfig({
     transpile: ["vue-sonner"]
   },
 
-  auth : {
-    baseURL: process.env.AUTH_ORIGIN,
-    provider : {
-      type: 'authjs'
-    },
+  devServer: {
+    https: {
+      key: './server.key',
+      cert: './server.crt'
+    }
   }
+
+  // auth : {
+  //   baseURL: process.env.AUTH_ORIGIN,
+  //   provider : {
+  //     type: 'authjs'
+  //   },
+  // }
 });
