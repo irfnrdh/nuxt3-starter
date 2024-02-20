@@ -1,7 +1,7 @@
 <template>
   <div>
     
-ini halaman index
+    ini halaman index
   </div>
 </template>
 
